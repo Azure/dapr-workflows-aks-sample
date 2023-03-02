@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: workflows-sample-dapr
+spec:
+  ports:
+    - name: http
+      port: 80
+      targetPort: 3500
+      protocol: TCP
+  selector:
+    run: workflows-sample
+  type: LoadBalancer
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: workflows-sample
+spec:
+  ports:
+    - name: http
+      port: 80
+      targetPort: 5064
+      protocol: TCP
+  selector:
+    run: workflows-sample
+  type: LoadBalancer
