@@ -19,6 +19,13 @@ builder.Services.AddDaprWorkflow(options =>
     options.RegisterActivity<UpdateInventoryActivity>();
 });
 
+// Dapr uses a random port for gRPC by default. If we don't know what that port
+// is (because this app was started separate from dapr), then assume 4001.
+if (string.IsNullOrEmpty(Environment.GetEnvironmentVariable("DAPR_GRPC_PORT")))
+{
+    Environment.SetEnvironmentVariable("DAPR_GRPC_PORT", "4001");
+}
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
