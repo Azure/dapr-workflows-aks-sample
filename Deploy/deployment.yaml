@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - name: workflows-sample
-          image: ghcr.io/shubham1172/dwf-sample:0.1.0
+          image: mcr.microsoft.com/daprio/samples/dotnet-workflows:0.1.0
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 5064
