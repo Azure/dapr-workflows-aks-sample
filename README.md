@@ -1,4 +1,4 @@
-# dapr-workflows-aks-sample
+# Manage workflows with the Dapr extension for Azure Kubernetes Service (AKS)
 With Dapr Workflows, you can easily orchestrate messaging, state management, and failure-handling logic across various microservices. Dapr Workflows can help you create long-running, fault-tolerant, and stateful applications.
 
 ## Running this sample
