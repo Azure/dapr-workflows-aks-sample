@@ -46,7 +46,7 @@ With Dapr Workflows, you can easily orchestrate messaging, state management, and
 1. Start the workflow.
 
    ```bash
-   curl -i -X POST $DAPR_URL/v1.0-beta1/workflows/dapr/OrderProcessingWorkflow/1234/start \
+   curl -i -X POST $DAPR_URL/v1.0-beta1/workflows/dapr/OrderProcessingWorkflow/start?instanceID=1234 \
      -H "Content-Type: application/json" \
      -d '{ "input" : {"Name": "Paperclips", "TotalCost": 99.95, "Quantity": 1}}'
    ```
