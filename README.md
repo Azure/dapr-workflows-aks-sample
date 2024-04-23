@@ -54,7 +54,7 @@ With Dapr Workflows, you can easily orchestrate messaging, state management, and
 1. Check the status of the workflow.
 
    ```bash
-   curl -i -X GET $DAPR_URL/v1.0-beta1/workflows/dapr/OrderProcessingWorkflow/1234
+   curl -i -X GET $DAPR_URL/v1.0-beta1/workflows/dapr/1234
    ```
 
 ## Related links
